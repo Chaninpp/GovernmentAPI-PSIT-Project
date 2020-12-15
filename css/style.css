@@ -21,120 +21,17 @@
   }
   /* Color */
   :root {
-    --ci1: #fdecf2;
-    --ci2: #fdd600;
-    --ci3: #ef8f83;
-    --ci4: #f15942;
-    --ci5: #8d0801;
-    --ci6: #2d4791;
-    --ci7: #112047;
-    --ci8: #001427;
-    --ci9: #708d81;
-    --ci10: #f4d58d;
-    --ci11: #bf0603;
+
   }
   /* Background Color */
-  .bg-pale-pink {
-    background: var(--ci1);
-  }
-  .bg-yellow {
-    background: var(--ci2);
-  }
-  .bg-pink {
-    background: var(--ci3);
-  }
-  .bg-peach {
-    background: var(--ci4);
-  }
-  .bg-red {
-    background: var(--ci5);
-  }
-  .bg-blue {
-    background: var(--ci6);
-  }
-  .bg-navy {
-    background: var(--ci7);
-  }
-  .bg-navy-blue {
-    background: var(--ci8);
-  }
-  .bg-green {
-    background: var(--ci9);
-  }
-  .bg-pale-yellow {
-    background: var(--ci10);
-  }
-  .bg-pale-red {
-    background: var(--ci11);
-  }
+  
+  
   /* Font Color */
-  .cl-pale-pink {
-    color: var(--ci1);
-  }
-  .cl-yellow {
-    color: var(--ci2);
-  }
-  .cl-pink {
-    color: var(--ci3);
-  }
-  .cl-peach {
-    color: var(--ci4);
-  }
-  .cl-red {
-    color: var(--ci5);
-  }
-  .cl-blue {
-    color: var(--ci6);
-  }
-  .cl-navy {
-    color: var(--ci7);
-  }
-  .cl-navy-blue {
-    color: var(--ci8);
-  }
-  .cl-green {
-    color: var(--ci9);
-  }
-  .cl-pale-yellow {
-    color: var(--ci10);
-  }
-  .cl-pale-red {
-    color: var(--ci11);
-  }
+  
+
   /* Border Color */
-  .bor-pale-pink {
-    border-color: var(--ci1);
-  }
-  .bor-yellow {
-    border-color: var(--ci2);
-  }
-  .bor-pink {
-    border-color: var(--ci3);
-  }
-  .bor-peach {
-    border-color: var(--ci4);
-  }
-  .bor-red {
-    border-color: var(--ci5);
-  }
-  .bor-blue {
-    border-color: var(--ci6);
-  }
-  .bor-navy {
-    border-color: var(--ci7);
-  }
-  .bor-navy-blue {
-    border-color: var(--ci8);
-  }
-  .bor-green {
-    border-color: var(--ci9);
-  }
-  .bor-pale-yellow {
-    border-color: var(--ci10);
-  }
-  .bor-pale-red {
-    border-color: var(--ci11);
-  }
+  
+  
   /* Button Color */
   .btn-pink-navy {
     background: var(--ci3);
