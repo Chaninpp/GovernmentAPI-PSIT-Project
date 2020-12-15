@@ -14,9 +14,9 @@ def foo():
     url = 'https://opend.data.go.th/govspending/cgdcontract'
     token = 'A9VPOilnDeOorteHHvLCclobveFpOnOa' #Key ที่ได้จากการลงทะเบียน
     if text == " " or num == " ":
-        parameters = {'api-key':token, 'limit':100, 'keyword':text, 'year': num} 
-    else:
         parameters = {'api-key':token, 'limit':100} 
+    else:
+        parameters = {'api-key':token, 'limit':100, 'keyword':text, 'year': num} 
     record = requests.get(url, params=parameters) #ยิง request ไปขอที่ url ขอดูค่าตามที่เขียนไว้ใน parameter
     result = record.json()
 
