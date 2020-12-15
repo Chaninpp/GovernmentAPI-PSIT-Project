@@ -9,4 +9,5 @@
   <ul>
   <li>python -m pip install Flask</li> 
   <li>pip install requests</li> 
+  <li>pip install pygal</li>
   </ul>
