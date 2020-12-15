@@ -21,7 +21,17 @@
   }
   /* Color */
   :root {
-
+    --ci1: #264653;
+    --ci2: #2a9d8f;
+    --ci3: #e9c46a;
+    --ci4: #f4a261;
+    --ci5: #e76f51;
+    --ci6: #001427;
+    --ci7: #708d81;
+    --ci8: #f4d58d;
+    --ci9: #bf0603;
+    --ci10: #8d0801;
+    --ci11: #f2e8cf;
   }
   /* Background Color */
   
