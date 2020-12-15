@@ -34,7 +34,39 @@
     --ci11: #f2e8cf;
   }
   /* Background Color */
-  
+  .bg-navy-green {
+    background: var(--ci1);
+  }
+  .bg-pale-green {
+    background: var(--ci2);
+  }
+  .bg-yellow {
+    background: var(--ci3);
+  }
+  .bg-orange {
+    background: var(--ci4);
+  }
+  .bg-coral {
+    background: var(--ci5);
+  }
+  .bg-navy-blue {
+    background: var(--ci6);
+  }
+  .bg-green {
+    background: var(--ci7);
+  }
+  .bg-pale-yellow {
+    background: var(--ci8);
+  }
+  .bg-red {
+    background: var(--ci9);
+  }
+  .bg-navy-red {
+    background: var(--ci10);
+  }
+  .bg-cream {
+    background: var(--ci11);
+  }
   
   /* Font Color */
   
