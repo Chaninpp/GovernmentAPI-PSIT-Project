@@ -104,7 +104,39 @@
   }
 
   /* Border Color */
-  
+  .bor-navy-green {
+    border-color: var(--ci1);
+  }
+  .bor-pale-green {
+    border-color: var(--ci2);
+  }
+  .bor-yellow {
+    border-color: var(--ci3);
+  }
+  .bor-orange {
+    border-color: var(--ci4);
+  }
+  .bor-coral {
+    border-color: var(--ci5);
+  }
+  .bor-navy-blue {
+    border-color: var(--ci6);
+  }
+  .bor-green {
+    border-color: var(--ci7);
+  }
+  .bor-pale-yellow {
+    border-color: var(--ci8);
+  }
+  .bor-red {
+    border-color: var(--ci9);
+  }
+  .bor-navy-red {
+    border-color: var(--ci10);
+  }
+  .bor-cream {
+    border-color: var(--ci11);
+  }
   
   /* Button Color */
   .btn-pink-navy {
