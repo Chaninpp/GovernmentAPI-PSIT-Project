@@ -1,0 +1,239 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GovernmentAPI</title>
+  <link rel="icon" href="img/logo/logo_peach.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=K2D&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- offline bootstrap -->
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/bootstrap.css') }}" >
+  <!-- offline fullpage.js -->
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css') }}" >
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/fullpage.css') }}" >
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/header.css') }}" >
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/interactive.css') }}" >
+
+</head>
+
+<body>
+  <!-- 
+      ||| fixed elements |||
+     -->
+  <!-- ปุ่มกลับไปหน้าค้นหา seacrh.html -->
+    <form action='/gosearch/' method='POST'>
+  <button name='gosearch' type='submit'>ค้นหาเพิ่มเติม</button>
+  </form>
+
+  <!-- credit -->
+  <img src="img/UI/copyright.svg" class="btn-credit">
+  <p class="credit">
+    เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา....
+    คณะเทคโนโลยีสารสนเทศสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ©2020
+  </p>
+  <!-- 
+        |||   pages   |||
+    -->
+  <div id="wrapper">
+    <!-- page 1 -->
+    <div class="section bg-blue">
+      <div class="fixed">
+        <img src="img/header/big_logo.svg" class="big-logo" />
+        <div style="margin-bottom: 25px">
+          <p class="fade1 subhead cl-yellow" style="margin-bottom: 8px">
+            GovernmentAPI
+          </p>
+          <p class="fade2 cl-pale-pink">
+          </p>
+        </div>
+        <div class="icon-scroll"></div>
+      </div>
+    </div>
+
+    <!-- page 2 -->
+    <h3>แผนภูมิวงกลมแสดงข้อมูลของปีงบประมาณ 59-63</h3><BR>
+    <!-- มีปุ่มให้กดเลื่อนรูป -->
+    <div class="section bg-pale-pink">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart_BBGroup_2559.svg') }}" /></figure>
+    </div>
+    <div class="carousel-item">
+      <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart_BBGroup_2560.svg') }}" /></figure>
+    </div>
+    <div class="carousel-item">
+      <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart_BBGroup_2561.svg') }}" /></figure>
+    </div>
+    <div class="carousel-item">
+      <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart_BBGroup_2562.svg') }}" /></figure>
+    </div>
+      <div class="carousel-item">
+      <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart_BBGroup_2563.svg') }}" /></figure>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon hvr-grow" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon hvr-grow" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+    </div>
+
+    <!-- maincontent 1 -->
+    <div class="section bg-pale-pink" style="z-index: 3;">
+      <ul id="mNav" style="z-index: 4;">
+        <li class="mButton activeButt">
+          <a href="#1-1"><img src="img/UI/nav01.svg" /></a>
+        </li>
+        <li class="mButton">
+          <a href="#2-1"><img src="img/UI/nav02.svg" /></a>
+        </li>
+        <li class="mButton">
+          <a href="#3-1"><img src="img/UI/nav03.svg" /></a>
+        </li>
+      </ul>
+      <div class="slide" id="1-1">
+        แผนภูมิวงกลม
+      </div>
+      <div class="slide" id="1-2">
+        กราฟ
+      </div>
+      <div class="slide" id="1-3">
+      <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart_sum.svg') }}" /></figure>
+      <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart1.svg') }}" /></figure>
+      </div>
+    </div>
+
+  </div>
+ <!-- 
+        |||   scripts   ||| 
+    -->
+  <!-- icons -->
+  <script src="https://kit.fontawesome.com/3437ca9b77.js"></script>
+
+  <!-- jquery -->
+  <script src="script/jquery-3.5.1.min.js"></script>
+
+  <!-- jquery-ui -->
+  <script src="script/jquery-ui.js"></script>
+
+  <!-- fullpage.js -->
+  <script src="script/fullpage.js"></script>
+
+  <!-- isOnScreen -->
+  <script src="script/jquery.isonscreen.js"></script>
+
+  <!-- bootstrap -->
+  <script src="script/bootstrap.js"></script>
+
+  <!-- universal script -->
+  <script>
+    // enable fullpage.js
+    new fullpage("#wrapper", {
+      //options here
+      autoScrolling: true,
+      scrollHorizontally: true,
+      loopHorizontal: false
+    });
+
+    $(document).ready(function () {
+      cddisplay();
+      $(".fp-controlArrow").click(function () {
+        if ($(".slideBeforeLock").isOnScreen()) {
+          $(".fp-controlArrow").css({ "border-style": "none" });
+        }
+        if ($(".slideBeforeTimer").isOnScreen()) {
+          $(".fp-controlArrow").css({ "border-style": "none" });
+          cdreset();
+        }
+      });
+    });
+
+    //   timer
+    var CCOUNT = 10;
+
+    var t, count;
+
+    function cddisplay() {
+      // displays time in span
+      count = (count < 10) ? '0' + count : count;
+      $("#timer").html("00 : " + count);
+      $("#pog").val(count);
+    }
+
+    function countdown() {
+      // starts countdown
+      cddisplay();
+      if (count == 0) {
+        // time is up
+        cdpause();
+        $("#timedQuiz").fadeOut();
+        $("#timedNo").fadeIn(1000);
+      } else {
+        count--;
+        t = setTimeout("countdown()", 1000);
+      }
+    }
+
+    function cdpause() {
+      // pauses countdown
+      clearTimeout(t);
+    }
+
+    function cdreset() {
+      // resets countdown
+      cdpause();
+      count = CCOUNT;
+      cddisplay();
+      countdown();
+    }
+
+    $(".q1-yes").click(function () {
+      cdpause();
+      $("#timedQuiz").fadeOut();
+      $("#timedYes").fadeIn(1000);
+      $(".fp-controlArrow").css({ "border-style": "solid" });
+    });
+    $(".q1-no").click(function () {
+      cdpause();
+      $("#timedQuiz").fadeOut();
+      $("#timedNo").fadeIn(1000);
+    });
+    $(".q1-retry").click(function () {
+      $("#timedNo").fadeOut();
+      $("#timedQuiz").fadeIn(1000);
+      cdreset();
+    });
+    // Credit
+    $(".btn-credit").click(function () {
+      $(".credit").slideToggle(500);
+    });
+    $(".credit").click(function () {
+      $(".credit").slideToggle(500);
+    });
+    //text fade in
+    $('.fade1').slideDown(2000);
+    $('.fade2').delay(500).slideDown(2000);
+    $('.fade3').delay(1000).slideDown(2000);
+    $('.fade4').delay(1500).slideDown(2000);
+  </script>
+
+  <!-- Interactive -->
+  <script src="script/interactive.js"></script>
+
+
+</body>
+
+</html>

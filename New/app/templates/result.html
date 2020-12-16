@@ -1,0 +1,205 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GovernmentAPI</title>
+  <link rel="icon" href="img/logo/logo_peach.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=K2D&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet" />
+  <!-- offline bootstrap -->
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/bootstrap.css') }}" >
+  <!-- offline fullpage.js -->
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css') }}" >
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/fullpage.css') }}" >
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/header.css') }}" >
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/interactive.css') }}" >
+
+</head>
+
+<body>
+  <!-- 
+      ||| fixed elements |||
+     -->
+  <!-- ปุ่มกลับไปหน้าแรก index.html -->
+  <form action='/forward/' method='POST'>
+  <button name='forwardBtn' type='submit'>Home</button>
+  </form>
+
+  <!-- credit -->
+  <img src="img/UI/copyright.svg" class="btn-credit">
+  <p class="credit">
+    เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา....
+    คณะเทคโนโลยีสารสนเทศสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ©2020
+  </p>
+  <!-- 
+        |||   pages   |||
+    -->
+  <div id="wrapper">
+    <!-- page 1 -->
+    <div class="section bg-blue">
+      <div class="fixed">
+        <img src="img/header/big_logo.svg" class="big-logo" />
+        <div style="margin-bottom: 25px">
+          <p class="fade1 subhead cl-yellow" style="margin-bottom: 8px">
+            GovernmentAPI
+          </p>
+          <p class="fade2 cl-pale-pink">
+            <form class="userinput" method="POST">
+      <select name="input_keyword" class="span4">
+         <option value=" " selected>ทั้งหมด</option>
+         <option value="เครื่องมือและอุปกรณ์การแพทย์">เครื่องมือและอุปกรณ์การแพทย์</option>
+         <option value="อุปกรณ์การศึกษา">อุปกรณ์การศึกษา</option>
+         <option value="รถถัง">รถถัง</option>
+         <option value="กระสุนปืน">กระสุนปืน</option>
+    </select>
+    <select name="input_year" class="span4">
+      <option value=" " selected>ทั้งหมด</option>
+      <option value="2558" >2558</option>
+      <option value="2559" >2559</option>
+      <option value="2560" >2560</option>
+      <option value="2561" >2561</option>
+      <option value="2562" >2562</option>
+      <option value="2563" >2563</option>
+ </select>
+      <button type="submit">ค้นหา</button> <!--ปุ่มค้นหา-->
+  </form>
+          </p>
+        </div>
+        <div class="icon-scroll"></div>
+      </div>
+    </div>
+
+    <!-- page 2 -->
+    <div class="section bg-pale-pink">
+            <ul>
+         {% for x, y in members.items(): %}
+         <li>{{ x }}</li> <!-- x คือ ชื่อกระทรวง/หน่วยงาน -->
+            {% for i in y%}
+               <p>{{ i }}</p> <!-- i คือ ชื่อโครงการกับเงิน -->
+            {% endfor %}
+         {% endfor %}
+    </ul>
+    </div>
+
+  </div>
+ <!-- 
+        |||   scripts   ||| 
+    -->
+  <!-- icons -->
+  <script src="https://kit.fontawesome.com/3437ca9b77.js"></script>
+
+  <!-- jquery -->
+  <script src="script/jquery-3.5.1.min.js"></script>
+
+  <!-- jquery-ui -->
+  <script src="script/jquery-ui.js"></script>
+
+  <!-- fullpage.js -->
+  <script src="script/fullpage.js"></script>
+
+  <!-- isOnScreen -->
+  <script src="script/jquery.isonscreen.js"></script>
+
+  <!-- bootstrap -->
+  <script src="script/bootstrap.js"></script>
+
+  <!-- universal script -->
+  <script>
+    // enable fullpage.js
+    new fullpage("#wrapper", {
+      //options here
+      autoScrolling: true,
+      scrollHorizontally: true,
+      loopHorizontal: false
+    });
+
+    $(document).ready(function () {
+      cddisplay();
+      $(".fp-controlArrow").click(function () {
+        if ($(".slideBeforeLock").isOnScreen()) {
+          $(".fp-controlArrow").css({ "border-style": "none" });
+        }
+        if ($(".slideBeforeTimer").isOnScreen()) {
+          $(".fp-controlArrow").css({ "border-style": "none" });
+          cdreset();
+        }
+      });
+    });
+
+    //   timer
+    var CCOUNT = 10;
+
+    var t, count;
+
+    function cddisplay() {
+      // displays time in span
+      count = (count < 10) ? '0' + count : count;
+      $("#timer").html("00 : " + count);
+      $("#pog").val(count);
+    }
+
+    function countdown() {
+      // starts countdown
+      cddisplay();
+      if (count == 0) {
+        // time is up
+        cdpause();
+        $("#timedQuiz").fadeOut();
+        $("#timedNo").fadeIn(1000);
+      } else {
+        count--;
+        t = setTimeout("countdown()", 1000);
+      }
+    }
+
+    function cdpause() {
+      // pauses countdown
+      clearTimeout(t);
+    }
+
+    function cdreset() {
+      // resets countdown
+      cdpause();
+      count = CCOUNT;
+      cddisplay();
+      countdown();
+    }
+
+    $(".q1-yes").click(function () {
+      cdpause();
+      $("#timedQuiz").fadeOut();
+      $("#timedYes").fadeIn(1000);
+      $(".fp-controlArrow").css({ "border-style": "solid" });
+    });
+    $(".q1-no").click(function () {
+      cdpause();
+      $("#timedQuiz").fadeOut();
+      $("#timedNo").fadeIn(1000);
+    });
+    $(".q1-retry").click(function () {
+      $("#timedNo").fadeOut();
+      $("#timedQuiz").fadeIn(1000);
+      cdreset();
+    });
+    // Credit
+    $(".btn-credit").click(function () {
+      $(".credit").slideToggle(500);
+    });
+    $(".credit").click(function () {
+      $(".credit").slideToggle(500);
+    });
+    //text fade in
+    $('.fade1').slideDown(2000);
+    $('.fade2').delay(500).slideDown(2000);
+    $('.fade3').delay(1000).slideDown(2000);
+    $('.fade4').delay(1500).slideDown(2000);
+  </script>
+
+  <!-- Interactive -->
+  <script src="script/interactive.js"></script>
+
+
+</body>
+
+</html>
