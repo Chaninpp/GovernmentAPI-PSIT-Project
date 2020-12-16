@@ -14,7 +14,13 @@
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/fullpage.css') }}">
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/header.css') }}">
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/interactive.css') }}">
-  
+  <script type=text/javascript src="{{ url_for('static', filename='script/jquery-3.5.1.min.js') }}"></script>
+  <script type=text/javascript src="{{ url_for('static', filename='script/jquery-ui.js') }}"></script>
+  <script type=text/javascript src="{{ url_for('static', filename='script/jquery.isonscreen.js') }}"></script>
+  <script type=text/javascript src="{{ url_for('static', filename='script/fullpage.js') }}"></script>
+  <script type=text/javascript src="{{ url_for('static', filename='script/bootstrap.js') }}"></script>
+  <script type=text/javascript src="{{ url_for('static', filename='script/interactive.js') }}"></script>
+
 </head>
 
 <body>
@@ -24,7 +30,7 @@
   <!-- credit -->
   <img src="{{url_for('static', filename='/img/copyright.svg')}}" class="btn-credit">
   <p class="credit">
-    เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา....
+    เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา PROBLEM SOLVING IN INFORMATION TECHNOLOGY
     คณะเทคโนโลยีสารสนเทศสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ©2020
   </p>
   <!-- 
@@ -32,38 +38,40 @@
     -->
   <div id="wrapper">
     <!-- ปุ่มกลับไปหน้าแรก index.html -->
-    <div style="position: absolute;">
-    <form action='/forward/' method='POST'>
-      <button name='forwardBtn' type='submit'>Home</button>
-    </form></div>
+
+
     <!-- page 1 -->
-    <div class="section bg-navy-red" style="background-color: #8d0801;">
+    <div class="section bg-navy-red">
       <div class="fixed">
-        <div style="margin-bottom: 25px">
+        
+        <div style="position: relative; width: 600px; height: 300px; top: 200px; left: 200px;">
           <p class="subhead cl-yellow" style="margin-bottom: 8px">
             GovernmentAPI
           </p>
-          <p class="fade2 cl-pale-pink">
+          <p class="cl-navy-blue" style="font-size: 16px;">
           <form class="userinput" method="POST" action='/search'>
             <select name="input_keyword" class="span4">
-              <option value=" " selected>ทั้งหมด</option>
-              <option value="เครื่องมือและอุปกรณ์การแพทย์">เครื่องมือและอุปกรณ์การแพทย์</option>
-              <option value="อุปกรณ์การศึกษา">อุปกรณ์การศึกษา</option>
-              <option value="รถถัง">รถถัง</option>
-              <option value="กระสุนปืน">กระสุนปืน</option>
+              <option value=" " selected style="font-size: 16px;">ทั้งหมด</option>
+              <option value="เครื่องมือและอุปกรณ์การแพทย์" style="font-size: 16px;">เครื่องมือและอุปกรณ์การแพทย์</option>
+              <option value="อุปกรณ์การศึกษา" style="font-size: 16px;">อุปกรณ์การศึกษา</option>
+              <option value="รถถัง" style="font-size: 16px;">รถถัง</option>
+              <option value="กระสุนปืน" style="font-size: 16px;">กระสุนปืน</option>
             </select>
             <select name="input_year" class="span4">
-              <option value=" " selected>ทั้งหมด</option>
-              <option value="2558">2558</option>
-              <option value="2559">2559</option>
-              <option value="2560">2560</option>
-              <option value="2561">2561</option>
-              <option value="2562">2562</option>
-              <option value="2563">2563</option>
+              <option value=" " selected style="font-size: 16px;">ทั้งหมด</option>
+              <option value="2558" style="font-size: 16px;">2558</option>
+              <option value="2559" style="font-size: 16px;">2559</option>
+              <option value="2560" style="font-size: 16px;">2560</option>
+              <option value="2561" style="font-size: 16px;">2561</option>
+              <option value="2562" style="font-size: 16px;">2562</option>
+              <option value="2563" style="font-size: 16px;">2563</option>
             </select>
-            <button type="submit">ค้นหา</button>
+            <button type="submit" style="font-size: 16px;">ค้นหา</button>
           </form>
           </p>
+          <form action='/forward/' method='POST'>
+          <button name='forwardBtn' type='submit' style="font-size: 16px;">Home</button>
+        </form>
         </div>
       </div>
     </div>
