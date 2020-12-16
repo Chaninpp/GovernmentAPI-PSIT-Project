@@ -27,7 +27,7 @@
   </form>
 
   <!-- credit -->
-  <img src="img/UI/copyright.svg" class="btn-credit">
+  <img src="{{url_for('static', filename='/img/copyright.svg')}}" class="btn-credit">
   <p class="credit">
     เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา....
     คณะเทคโนโลยีสารสนเทศสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ©2020
@@ -37,10 +37,10 @@
     -->
   <div id="wrapper">
     <!-- page 1 -->
-    <div class="section bg-blue">
+    <div class="section bg-navy-red">
       <div class="fixed">
-        <img src="img/header/big_logo.svg" class="big-logo" />
-        <div style="margin-bottom: 25px">
+        <img src="{{url_for('static', filename='/img/1-1.png')}}" style="width: 120px; height: 120px; position: relative; margin-top: 200px;" />
+        <div style="margin: auto;">
           <p class="fade1 subhead cl-yellow" style="margin-bottom: 8px">
             GovernmentAPI
           </p>
@@ -71,7 +71,7 @@
     </div>
 
     <!-- page 2 -->
-    <div class="section bg-pale-pink">
+    <div class="section bg-yellow">
             <ul>
          {% for x, y in members.items(): %}
          <li>{{ x }}</li> <!-- x คือ ชื่อกระทรวง/หน่วยงาน -->

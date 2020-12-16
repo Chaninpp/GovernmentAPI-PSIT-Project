@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/fullpage.css') }}">
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/header.css') }}">
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/interactive.css') }}">
-
+  
 </head>
 
 <body>
@@ -22,7 +22,7 @@
       ||| fixed elements |||
      -->
   <!-- credit -->
-  <img src="/static//img/copyright.svg" class="btn-credit">
+  <img src="{{url_for('static', filename='/img/copyright.svg')}}" class="btn-credit">
   <p class="credit">
     เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา....
     คณะเทคโนโลยีสารสนเทศสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ©2020
