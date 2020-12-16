@@ -9,26 +9,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet" />
 
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
   <!-- offline bootstrap -->
-  <link rel="stylesheet" href="{{ url_for ('static', filename='css/bootstrap.css') }}" >
+  <link rel="stylesheet" href="css/bootstrap.css">
   <!-- offline fullpage.js -->
-  <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css') }}" >
-  <link rel="stylesheet" href="{{ url_for ('static', filename='css/fullpage.css') }}" >
-  <link rel="stylesheet" href="{{ url_for ('static', filename='css/header.css') }}" >
-  <link rel="stylesheet" href="{{ url_for ('static', filename='css/interactive.css') }}" >
-  <!-- offline bootstrap -->
-  <link rel="stylesheet" href="css/bootstrap.css" />
-  <!-- offline fullpage.js -->
-  <link rel="stylesheet" href="css/fullpage.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/interactive.css">
-
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/fullpage.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/interactive.css') }}">
 </head>
 
 <body>
@@ -36,14 +36,14 @@
       ||| fixed elements |||
      -->
   <!-- ปุ่มกลับไปหน้าค้นหา seacrh.html -->
-    <form action='/gosearch/' method='POST'>
-  <button name='gosearch' type='submit'>ค้นหาเพิ่มเติม</button>
+  <form action='/gosearch/' method='POST'>
+    <button name='gosearch' type='submit'>ค้นหาเพิ่มเติม</button>
   </form>
 
   <!-- credit -->
   <img src="img/UI/copyright.svg" class="btn-credit">
   <p class="credit">
-    เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา....
+    เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา PROBLEM SOLVING IN INFORMATION TECHNOLOGY
     คณะเทคโนโลยีสารสนเทศสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ©2020
   </p>
   <!-- 
@@ -51,14 +51,11 @@
     -->
   <div id="wrapper">
     <!-- page 1 -->
-    <div class="section bg-blue">
+    <div class="section bg-navy-red">
       <div class="fixed">
-        <img src="img/header/big_logo.svg" class="big-logo" />
         <div style="margin-bottom: 25px">
-          <p class="fade1 subhead cl-yellow" style="margin-bottom: 8px">
+          <p class="head cl-yellow" style="margin-bottom: 8px">
             GovernmentAPI
-          </p>
-          <p class="fade2 cl-pale-pink">
           </p>
         </div>
         <div class="icon-scroll"></div>
@@ -70,47 +67,41 @@
     <!-- มีปุ่มให้กดเลื่อนรูป -->
     <div class="section bg-pale-pink">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart_BBGroup_2559.svg') }}" /></figure>
-    </div>
-    <div class="carousel-item">
-      <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart_BBGroup_2560.svg') }}" /></figure>
-    </div>
-    <div class="carousel-item">
-      <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart_BBGroup_2561.svg') }}" /></figure>
-    </div>
-    <div class="carousel-item">
-      <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart_BBGroup_2562.svg') }}" /></figure>
-    </div>
-      <div class="carousel-item">
-      <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart_BBGroup_2563.svg') }}" /></figure>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon hvr-grow" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon hvr-grow" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <figure><embed type="image/svg+xml"
+                src="{{ url_for ('static', filename='api/SVG/chart_BBGroup_2559.svg') }}" /></figure>
+          </div>
+          <div class="carousel-item">
+            <figure><embed type="image/svg+xml"
+                src="{{ url_for ('static', filename='api/SVG/chart_BBGroup_2560.svg') }}" /></figure>
+          </div>
+          <div class="carousel-item">
+            <figure><embed type="image/svg+xml"
+                src="{{ url_for ('static', filename='api/SVG/chart_BBGroup_2561.svg') }}" /></figure>
+          </div>
+          <div class="carousel-item">
+            <figure><embed type="image/svg+xml"
+                src="{{ url_for ('static', filename='api/SVG/chart_BBGroup_2562.svg') }}" /></figure>
+          </div>
+          <div class="carousel-item">
+            <figure><embed type="image/svg+xml"
+                src="{{ url_for ('static', filename='api/SVG/chart_BBGroup_2563.svg') }}" /></figure>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon hvr-grow" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon hvr-grow" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
 
     <!-- maincontent 1 -->
     <div class="section bg-pale-pink" style="z-index: 3;">
-      <ul id="mNav" style="z-index: 4;">
-        <li class="mButton activeButt">
-          <a href="#1-1"><img src="img/UI/nav01.svg" /></a>
-        </li>
-        <li class="mButton">
-          <a href="#2-1"><img src="img/UI/nav02.svg" /></a>
-        </li>
-        <li class="mButton">
-          <a href="#3-1"><img src="img/UI/nav03.svg" /></a>
-        </li>
-      </ul>
       <div class="slide" id="1-1">
         แผนภูมิวงกลม
       </div>
@@ -118,13 +109,13 @@
         กราฟ
       </div>
       <div class="slide" id="1-3">
-      <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart_sum.svg') }}" /></figure>
-      <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart1.svg') }}" /></figure>
+        <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart_sum.svg') }}" /></figure>
+        <figure><embed type="image/svg+xml" src="{{ url_for ('static', filename='api/SVG/chart1.svg') }}" /></figure>
       </div>
     </div>
 
   </div>
- <!-- 
+  <!-- 
         |||   scripts   ||| 
     -->
   <!-- icons -->

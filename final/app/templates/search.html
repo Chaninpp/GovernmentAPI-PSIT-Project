@@ -8,12 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=K2D&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet" />
   <!-- offline bootstrap -->
-  <link rel="stylesheet" href="{{ url_for ('static', filename='css/bootstrap.css') }}" >
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/bootstrap.css') }}">
   <!-- offline fullpage.js -->
-  <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css') }}" >
-  <link rel="stylesheet" href="{{ url_for ('static', filename='css/fullpage.css') }}" >
-  <link rel="stylesheet" href="{{ url_for ('static', filename='css/header.css') }}" >
-  <link rel="stylesheet" href="{{ url_for ('static', filename='css/interactive.css') }}" >
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/fullpage.css') }}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/header.css') }}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/interactive.css') }}">
 
 </head>
 
@@ -21,11 +21,6 @@
   <!-- 
       ||| fixed elements |||
      -->
-    <!-- ปุ่มกลับไปหน้าแรก index.html -->
-  <form action='/forward/' method='POST'>
-  <button name='forwardBtn' type='submit'>Home</button>
-  </form>
-
   <!-- credit -->
   <img src="img/UI/copyright.svg" class="btn-credit">
   <p class="credit">
@@ -36,63 +31,44 @@
         |||   pages   |||
     -->
   <div id="wrapper">
+    <!-- ปุ่มกลับไปหน้าแรก index.html -->
+    <div style="position: absolute;">
+    <form action='/forward/' method='POST'>
+      <button name='forwardBtn' type='submit'>Home</button>
+    </form></div>
     <!-- page 1 -->
-    <div class="section bg-blue">
-      <div class="fixed">
-        <img src="img/header/big_logo.svg" class="big-logo" />
+    <div class="section bg-navy-red">
+      
         <div style="margin-bottom: 25px">
-          <p class="fade1 subhead cl-yellow" style="margin-bottom: 8px">
+          <p class="subhead cl-yellow" style="margin-bottom: 8px">
             GovernmentAPI
           </p>
           <p class="fade2 cl-pale-pink">
-      <form class="userinput" method="POST" action='/search'>
-      <select name="input_keyword" class="span4">
-         <option value=" " selected>ทั้งหมด</option>
-         <option value="เครื่องมือและอุปกรณ์การแพทย์">เครื่องมือและอุปกรณ์การแพทย์</option>
-         <option value="อุปกรณ์การศึกษา">อุปกรณ์การศึกษา</option>
-         <option value="รถถัง">รถถัง</option>
-         <option value="กระสุนปืน">กระสุนปืน</option>
-    </select>
-    <select name="input_year" class="span4">
-      <option value=" " selected>ทั้งหมด</option>
-      <option value="2558" >2558</option>
-      <option value="2559" >2559</option>
-      <option value="2560" >2560</option>
-      <option value="2561" >2561</option>
-      <option value="2562" >2562</option>
-      <option value="2563" >2563</option>
- </select>
-      <button type="submit">ค้นหา</button>
-  </form>
+          <form class="userinput" method="POST" action='/search'>
+            <select name="input_keyword" class="span4">
+              <option value=" " selected>ทั้งหมด</option>
+              <option value="เครื่องมือและอุปกรณ์การแพทย์">เครื่องมือและอุปกรณ์การแพทย์</option>
+              <option value="อุปกรณ์การศึกษา">อุปกรณ์การศึกษา</option>
+              <option value="รถถัง">รถถัง</option>
+              <option value="กระสุนปืน">กระสุนปืน</option>
+            </select>
+            <select name="input_year" class="span4">
+              <option value=" " selected>ทั้งหมด</option>
+              <option value="2558">2558</option>
+              <option value="2559">2559</option>
+              <option value="2560">2560</option>
+              <option value="2561">2561</option>
+              <option value="2562">2562</option>
+              <option value="2563">2563</option>
+            </select>
+            <button type="submit">ค้นหา</button>
+          </form>
           </p>
         </div>
-        <div class="icon-scroll"></div>
-      </div>
-    </div>
-
-    <!-- page 2 -->
-    <div class="section bg-pale-pink">
-      เกริ่น
-    </div>
-
-    <!-- maincontent 1 -->
-    <div class="section bg-pale-pink" style="z-index: 3;">
-      <ul id="mNav" style="z-index: 4;">
-        <li class="mButton activeButt">
-          <a href="#1-1"><img src="img/UI/nav01.svg" /></a>
-        </li>
-        <li class="mButton">
-          <a href="#2-1"><img src="img/UI/nav02.svg" /></a>
-        </li>
-        <li class="mButton">
-          <a href="#3-1"><img src="img/UI/nav03.svg" /></a>
-        </li>
-      </ul>
-      
     </div>
 
   </div>
- <!-- 
+  <!-- 
         |||   scripts   ||| 
     -->
   <!-- icons -->

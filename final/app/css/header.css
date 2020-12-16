@@ -1,0 +1,48 @@
+.big-logo {
+    padding-top: 310.6px;
+    margin-bottom: 26.8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* mouse scrolling animation */
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 50%;
+  bottom: 35px;
+}
+.icon-scroll {
+  width: 42px;
+  height: 73px;
+  border: 5px solid #fff;
+  border-radius: 25px;
+  margin-left: -21px;
+}
+@media (max-width: 767px) {
+  .icon-scroll {
+    position: relative;
+  }
+}
+.icon-scroll:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  margin-left: -8px;
+  top: 8px;
+  border-radius: 50%;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+/* mouse scrolling animation end here */
