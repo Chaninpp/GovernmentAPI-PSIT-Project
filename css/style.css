@@ -1,6 +1,6 @@
 /* Font Size */
 * {
-    font-family: 'Sarabun', sans-serif;
+    font-family: "K2D", sans-serif;
     font-size: 20px;
   }
   body{
@@ -8,14 +8,15 @@
   }
   
   .head {
-    font-family: 'Sarabun', sans-serif;
+    font-family: 'Trirong', serif;
     font-size: 50px;
   }
-
+  
   .subhead {
-    font-family: 'Sarabun', sans-serif;
+    font-family: 'Trirong', serif;
     font-size: 30px;
   }
+  
   /* wrapper always at lowest layer */
   .wrapper {
     z-index: -1;
