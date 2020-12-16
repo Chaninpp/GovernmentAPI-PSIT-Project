@@ -1,263 +1,268 @@
 /* Font Size */
 * {
-    font-family: "K2D", sans-serif;
-    font-size: 20px;
-  }
-  body{
-    scroll-behavior: smooth;
-  }
-  
-  .head {
-    font-family: "Chonburi", cursive;
-    font-size: 50px;
-  }
-  .subhead {
-    font-family: "Chonburi", cursive;
-    font-size: 30px;
-  }
-  /* wrapper always at lowest layer */
-  .wrapper {
-    z-index: -1;
-  }
-  /* Color */
-  :root {
-    --ci1: #fdecf2;
-    --ci2: #fdd600;
-    --ci3: #ef8f83;
-    --ci4: #f15942;
-    --ci5: #8d0801;
-    --ci6: #2d4791;
-    --ci7: #112047;
-    --ci8: #001427;
-    --ci9: #708d81;
-    --ci10: #f4d58d;
-    --ci11: #bf0603;
-  }
-  /* Background Color */
-  .bg-pale-pink {
+  font-family: "K2D", sans-serif;
+  font-size: 20px;
+}
+body{
+  scroll-behavior: smooth;
+}
+
+.head {
+  font-family: 'Trirong', serif;
+  font-size: 50px;
+}
+
+.subhead {
+  font-family: 'Trirong', serif;
+  font-size: 30px;
+}
+
+/* wrapper always at lowest layer */
+.wrapper {
+  z-index: -1;
+}
+/* Color */
+:root {
+  --ci1: #264653;
+  --ci2: #2a9d8f;
+  --ci3: #e9c46a;
+  --ci4: #f4a261;
+  --ci5: #e76f51;
+  --ci6: #001427;
+  --ci7: #708d81;
+  --ci8: #f4d58d;
+  --ci9: #bf0603;
+  --ci10: #8d0801;
+  --ci11: #f2e8cf;
+}
+/* Background Color */
+.bg-navy-green {
+  background: var(--ci1);
+}
+.bg-pale-green {
+  background: var(--ci2);
+}
+.bg-yellow {
+  background: var(--ci3);
+}
+.bg-orange {
+  background: var(--ci4);
+}
+.bg-coral {
+  background: var(--ci5);
+}
+.bg-navy-blue {
+  background: var(--ci6);
+}
+.bg-green {
+  background: var(--ci7);
+}
+.bg-pale-yellow {
+  background: var(--ci8);
+}
+.bg-red {
+  background: var(--ci9);
+}
+.bg-navy-red {
+  background: var(--ci10);
+}
+.bg-cream {
+  background: var(--ci11);
+}
+
+/* Font Color */
+.cl-navy-green {
+  color: var(--ci1);
+}
+.cl-pale-green {
+  color: var(--ci2);
+}
+.cl-yellow {
+  color: var(--ci3);
+}
+.cl-orange {
+  color: var(--ci4);
+}
+.cl-coral {
+  color: var(--ci5);
+}
+.cl-navy-blue {
+  color: var(--ci6);
+}
+.cl-green {
+  color: var(--ci7);
+}
+.cl-pale-yellow {
+  color: var(--ci8);
+}
+.cl-red {
+  color: var(--ci9);
+}
+.cl-navy-red {
+  color: var(--ci10);
+}
+.cl-cream {
+  color: var(--ci11);
+}
+
+/* Border Color */
+.bor-navy-green {
+  border-color: var(--ci1);
+}
+.bor-pale-green {
+  border-color: var(--ci2);
+}
+.bor-yellow {
+  border-color: var(--ci3);
+}
+.bor-orange {
+  border-color: var(--ci4);
+}
+.bor-coral {
+  border-color: var(--ci5);
+}
+.bor-navy-blue {
+  border-color: var(--ci6);
+}
+.bor-green {
+  border-color: var(--ci7);
+}
+.bor-pale-yellow {
+  border-color: var(--ci8);
+}
+.bor-red {
+  border-color: var(--ci9);
+}
+.bor-navy-red {
+  border-color: var(--ci10);
+}
+.bor-cream {
+  border-color: var(--ci11);
+}
+
+/* Button Color */
+.btn-pink-navy {
+  background: var(--ci3);
+  color: var(--ci7);
+}
+/* .btn-pink-navy:hover {
     background: var(--ci1);
-  }
-  .bg-yellow {
-    background: var(--ci2);
-  }
-  .bg-pink {
-    background: var(--ci3);
-  }
-  .bg-peach {
-    background: var(--ci4);
-  }
-  .bg-red {
-    background: var(--ci5);
-  }
-  .bg-blue {
-    background: var(--ci6);
-  }
-  .bg-navy {
-    background: var(--ci7);
-  }
-  .bg-navy-blue {
-    background: var(--ci8);
-  }
-  .bg-green {
-    background: var(--ci9);
-  }
-  .bg-pale-yellow {
-    background: var(--ci10);
-  }
-  .bg-pale-red {
-    background: var(--ci11);
-  }
-  /* Font Color */
-  .cl-pale-pink {
-    color: var(--ci1);
-  }
-  .cl-yellow {
-    color: var(--ci2);
-  }
-  .cl-pink {
     color: var(--ci3);
-  }
-  .cl-peach {
-    color: var(--ci4);
-  }
-  .cl-red {
-    color: var(--ci5);
-  }
-  .cl-blue {
-    color: var(--ci6);
-  }
-  .cl-navy {
-    color: var(--ci7);
-  }
-  .cl-navy-blue {
-    color: var(--ci8);
-  }
-  .cl-green {
-    color: var(--ci9);
-  }
-  .cl-pale-yellow {
-    color: var(--ci10);
-  }
-  .cl-pale-red {
-    color: var(--ci11);
-  }
-  /* Border Color */
-  .bor-pale-pink {
-    border-color: var(--ci1);
-  }
-  .bor-yellow {
-    border-color: var(--ci2);
-  }
-  .bor-pink {
-    border-color: var(--ci3);
-  }
-  .bor-peach {
-    border-color: var(--ci4);
-  }
-  .bor-red {
-    border-color: var(--ci5);
-  }
-  .bor-blue {
-    border-color: var(--ci6);
-  }
-  .bor-navy {
-    border-color: var(--ci7);
-  }
-  .bor-navy-blue {
-    border-color: var(--ci8);
-  }
-  .bor-green {
-    border-color: var(--ci9);
-  }
-  .bor-pale-yellow {
-    border-color: var(--ci10);
-  }
-  .bor-pale-red {
-    border-color: var(--ci11);
-  }
-  /* Button Color */
-  .btn-pink-navy {
-    background: var(--ci3);
-    color: var(--ci7);
-  }
-  /* .btn-pink-navy:hover {
-      background: var(--ci1);
-      color: var(--ci3);
-    } */
-  .btn-navy-yellow {
-    background: var(--ci7);
-    color: var(--ci2);
-  }
-  /* .btn-navy-yellow:hover {
-      background: var(--ci2);
-      color: var(--ci7);
-    } */
-  .btn-pink-white {
-    background: var(--ci3);
-    color: var(--ci1);
-  }
-  /* .btn-pink-white:hover {
-      background: var(--ci1);
-      color: var(--ci3);
-    } */
-  .container-fluid {
-    padding: 0;
-  }
-  /* logo */
-  .logo {
-    z-index: 999;
-    position: fixed;
-    top: 38px;
-    left: 50px;
-  }
-  /* credit */
-  .btn-credit {
-    z-index: 1000;
-    position: fixed;
-    bottom: 35px;
-    right: 75px;
-    cursor: pointer;
-    width: 43px;
-    height: 43px;
-    opacity: 0.5;
-    transition: .5s;
-  }
-  .btn-credit:hover{
-    opacity: 1;
-  }
-  .credit{
-    z-index: 999;
-    width: 100vw;
-    font-size: 16px;
-    text-align: center;
-    background: #fff;
-    position: fixed;
-    margin: 0;
-    padding: 29px 0 29px 0;
-    bottom: 0;
-    cursor: pointer;
-    display: none;
-  }
-  /* fixed container */
-  .fixed {
-    width: 1024px;
-    height: 768px;
-    position: relative;
-    margin: auto;
-    padding: 0;
-    text-align: center;
-    /* background: gray; */
-  }
-  /* animation */
-  .animation {
-    z-index: 0;
-    position: absolute;
-  }
-  /* size button */
-  .btn-size {
-    border-radius: 8px;
-  }
-  
-  /* main nav */
-  #mNav {
-    position: absolute;
-    list-style-type: none;
-    right: 84.9px;
-    top: 42px;
-    padding: 0;
-    z-index: 4;
-  }
-  .mButton {
-    display: inline;
-    padding: 7.5px;
-    opacity: .2;
-    transition: .5s;
-  }
-  
-  .mButton:hover {
-    opacity: 1;
-  }
-  
-  .activeButt{
-    opacity: 1;
-  }
-  
-  progress {
-    color: var(--ci2);
-  }
-  
-  progress::-webkit-progress-value {
-    background: var(--ci5);
-  }
-  
-  progress::-moz-progress-bar {
+  } */
+.btn-navy-yellow {
+  background: var(--ci7);
+  color: var(--ci2);
+}
+/* .btn-navy-yellow:hover {
     background: var(--ci2);
-  }
-  
-  progress::-webkit-progress-value {
-    background: var(--ci5);
-  }
-  
-  progress::-webkit-progress-bar {
-    background: var(--ci2);
-  }
+    color: var(--ci7);
+  } */
+.btn-pink-white {
+  background: var(--ci3);
+  color: var(--ci1);
+}
+/* .btn-pink-white:hover {
+    background: var(--ci1);
+    color: var(--ci3);
+  } */
+.container-fluid {
+  padding: 0;
+}
+/* logo */
+.logo {
+  z-index: 999;
+  position: fixed;
+  top: 38px;
+  left: 50px;
+}
+/* credit */
+.btn-credit {
+  z-index: 1000;
+  position: fixed;
+  bottom: 35px;
+  right: 75px;
+  cursor: pointer;
+  width: 43px;
+  height: 43px;
+  opacity: 0.5;
+  transition: .5s;
+}
+.btn-credit:hover{
+  opacity: 1;
+}
+.credit{
+  z-index: 999;
+  width: 100vw;
+  font-size: 16px;
+  text-align: center;
+  background: #fff;
+  position: fixed;
+  margin: 0;
+  padding: 29px 0 29px 0;
+  bottom: 0;
+  cursor: pointer;
+  display: none;
+}
+/* fixed container */
+.fixed {
+  width: 1024px;
+  height: 768px;
+  position: relative;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  /* background: gray; */
+}
+/* animation */
+.animation {
+  z-index: 0;
+  position: absolute;
+}
+/* size button */
+.btn-size {
+  border-radius: 8px;
+}
+
+/* main nav */
+#mNav {
+  position: absolute;
+  list-style-type: none;
+  right: 84.9px;
+  top: 42px;
+  padding: 0;
+  z-index: 4;
+}
+.mButton {
+  display: inline;
+  padding: 7.5px;
+  opacity: .2;
+  transition: .5s;
+}
+
+.mButton:hover {
+  opacity: 1;
+}
+
+.activeButt{
+  opacity: 1;
+}
+
+progress {
+  color: var(--ci2);
+}
+
+progress::-webkit-progress-value {
+  background: var(--ci5);
+}
+
+progress::-moz-progress-bar {
+  background: var(--ci2);
+}
+
+progress::-webkit-progress-value {
+  background: var(--ci5);
+}
+
+progress::-webkit-progress-bar {
+  background: var(--ci2);
+}
