@@ -39,15 +39,15 @@
     -->
 
   <!-- page 1 -->
-  <div style="background-color:  #e9c46a;">
+  <div style="background-color:  #2a9d8f;">
     <div class="fixed">
       <img src="{{url_for('static', filename='/img/1-1.png')}}"
         style="width: 120px; height: 120px; position: relative; margin-top: 200px;" />
       <div style="margin: auto;">
-        <p class="fade1 subhead cl-yellow" style="margin-bottom: 8px">
+        <p class="fade1 subhead cl-cream" style="margin-bottom: 8px">
           GovernmentAPI
         </p>
-        <p class="fade2 cl-pale-pink">
+        <p class="fade2 cl-cream">
         <form class="userinput" method="POST">
           <select name="input_keyword" class="span4">
             <option value=" " selected>ทั้งหมด</option>
@@ -73,7 +73,7 @@
           <button name='forwardBtn' type='submit'>Home</button>
         </form>
       </div>
-      <div class="icon-scroll"></div>
+      -
     </div>
 
 
@@ -82,9 +82,10 @@
     <div style="width: 1000px; margin-left: 400px;">
       <ul style="margin: auto;">
         {% for x, y in members.items(): %}
-        <li style="font-size: 16px; position: relative;">{{ x }}</li> <!-- x คือ ชื่อกระทรวง/หน่วยงาน -->
+        <li style="font-size: 16px; position: relative;
+        font-color: #f2e8cf;">{{ x }}</li> <!-- x คือ ชื่อกระทรวง/หน่วยงาน -->
         {% for i in y%}
-        <p style="font-size: 16px; top: 5px; position: relative;">{{ i }}</p> <!-- i คือ ชื่อโครงการกับเงิน -->
+        <p style="font-size: 16px; top: 5px; position: relative; font-color: #f2e8cf;">{{ i }}</p> <!-- i คือ ชื่อโครงการกับเงิน -->
         {% endfor %} {% endfor %}
       </ul>
     </div>
