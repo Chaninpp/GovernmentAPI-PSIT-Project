@@ -23,7 +23,5 @@ def pie():
     pie_chart.title = 'ปีงบประมาณ พ.ศ. 2559'
     for i in range (len(list_amount)):
         pie_chart.add(list_name[i], int(list_amount[i]))
-    graph_data = pie_chart.render_data_uri()
-    return render_template("search.html", graph_data = graph_data)
-    # pie_chart.render_to_file('api/SVG/chart_BBGroup_2559.svg')
+    pie_chart.render_to_file('api/SVG/chart_BBGroup_2559.svg')
 pie()
