@@ -16,7 +16,8 @@
   <li>Video link 👉 <a href="https://www.youtube.com/watch?v=EGMlW30U4E0&t=20s">Click me!</a></li>
   <li>Document link 👉 <a href="https://docs.google.com/document/d/100GKhjlhsJhnHsYIKGLSJYx8npvfPd1TDUq8jKxqx8Y/edit?fbclid=IwAR3TnkKT9gIJos9l0GiARnssdfy8Lopd387sMJ_sB5TpSUFOx9hBROuUrgQ">Click me!</a></li>
 </ul>
-## 🎓 Instructor | อาจารย์ที่ปรึกษา 🎓
+## 🎓 Instructor | อาจารย์ที่ปรึกษา 🎓 <br>
+  
    รศ.ดร. โชติพัชร์ ภรณวลัย	
   <img src="https://www.it.kmitl.ac.th/wp-content/uploads/2017/12/Chotipat-300x300.jpg" width="240" height="240"></a> 
 
