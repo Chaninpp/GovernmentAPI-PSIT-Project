@@ -17,7 +17,12 @@
   <li>pip install requests</li> 
   <li>pip install pygal</li>
   </ul>
-<h2>🎥 Video & Document🎥 <h2>
+<h2>How to run</h2>
+  <ul>
+  <li>run app.py</li> 
+  <li>open http://127.0.0.1:5000/ in your browser</li> 
+  </ul>
+  <h2>🎥 Video & Document🎥 <h2>
   <ul>
   <li>Video link 👉 <a href="https://youtu.be/EGMlW30U4E0">Click me!</a></li>
   <li>Document link 👉 <a href="https://docs.google.com/document/d/100GKhjlhsJhnHsYIKGLSJYx8npvfPd1TDUq8jKxqx8Y/edit?fbclid=IwAR3TnkKT9gIJos9l0GiARnssdfy8Lopd387sMJ_sB5TpSUFOx9hBROuUrgQ">Click me!</a></li>
