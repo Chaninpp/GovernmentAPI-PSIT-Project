@@ -14,10 +14,10 @@ def main():
         data = requests.get(url,params=parameters)
         doc = data.json()
         allproject = doc['result']
-        name1 = doc['summary']
-        name2 = name1['dept_name']
+        getsum = doc['summary']
+        name = getsum['dept_name']
         allproject.sort(key=lambda x: x['month'])
-        amount[name2] = [float(i['amount']) for i in allproject]
+        amount[name] = [float(i['amount']) for i in allproject]
 
     sum_ministry = []
     for i in amount.values():
