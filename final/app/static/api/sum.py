@@ -16,9 +16,9 @@ def sumbudget():
         total = allproject['total_price'].replace(',', '')
         dict_sum[year[i]] = total
     print(dict_sum.items())
-    pie_chart = pygal.HorizontalBar()
-    pie_chart.title = 'ข้อมูลผลสรุปโครงการจัดซื้อจัดจ้าง (ล้านบาท)'
+    bar = pygal.HorizontalBar()
+    bar.title = 'ข้อมูลผลสรุปโครงการจัดซื้อจัดจ้าง (ล้านบาท)'
     for i in dict_sum.items():
-        pie_chart.add(i[0], float(i[1]))
-    pie_chart.render_to_file('chart_sum.svg')
+        bar.add(i[0], float(i[1]))
+    bar.render_to_file('chart_sum.svg')
 sumbudget()
