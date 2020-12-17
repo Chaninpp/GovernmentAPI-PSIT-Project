@@ -2,7 +2,7 @@ import requests
 from pprint import pprint
 import pygal
 from flask import Flask, render_template, request
-def SearchProject():
+def pie():
     url = 'https://opend.data.go.th/govspending/bb_group_by_aspect'
     token = 'A9VPOilnDeOorteHHvLCclobveFpOnOa'
     parameters = {'api-key':token, 
@@ -26,4 +26,4 @@ def SearchProject():
     graph_data = pie_chart.render_data_uri()
     return render_template("search.html", graph_data = graph_data)
     # pie_chart.render_to_file('api/SVG/chart_BBGroup_2559.svg')
-SearchProject()
+pie()

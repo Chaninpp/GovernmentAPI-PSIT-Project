@@ -1,7 +1,7 @@
 import requests
 from pprint import pprint
 import pygal
-def SearchProject():
+def pie():
     url = 'https://opend.data.go.th/govspending/bb_group_by_aspect'
     token = 'A9VPOilnDeOorteHHvLCclobveFpOnOa'
     parameters = {'api-key':token, 
@@ -23,4 +23,4 @@ def SearchProject():
     for i in range (len(list_amount)):
         pie_chart.add(list_name[i], int(list_amount[i]))
     pie_chart.render_to_file('api/SVG/chart_BBGroup_2562.svg')
-SearchProject()
+pie()
