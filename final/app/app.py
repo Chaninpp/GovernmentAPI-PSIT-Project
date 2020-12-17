@@ -8,7 +8,7 @@ def home():
     return render_template('index.html',title='home')
 
 @app.route('/search', methods=['POST'])
-def foo():
+def api_search():
     text = request.form['input_keyword']
     num = request.form['input_year']
     url = 'https://opend.data.go.th/govspending/cgdcontract'
