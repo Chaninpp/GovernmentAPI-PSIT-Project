@@ -5,7 +5,11 @@
 ลงทะเบียนที่เว็บไซต์ https://opend.data.go.th/register_api/  เพื่อรับ APIs Key เสียก่อน เมื่อทำการลงทะเบียนเรียบร้อย ก็จะได้รับ User Token สำหรับการใช้ api ซึ่งโปรเจคนี้ได้ทำการเรียกใช้งานกลุ่มข้อมูลโครงการจัดซื้อจัดจ้างจากระบบการจัดซื้อจัดจ้างภาครัฐ (Thai Government Procurement) </p>
 <h2>Library Python ที่ใช้</h2>
   <ul>
-  <li>[Flask](https://flask.palletsprojects.com/en/1.1.x/) ใช้ในส่วนของ API</li>
+  <li> Flask(https://flask.palletsprojects.com/en/1.1.x/) ใช้เป็น web framework</li>
+  
+  <li> Pygal(http://www.pygal.org/en/stable/) ใช้ในส่วนของการสร้างกราฟ แผนภูมิต่าง ๆ</li>
+  
+  <li> request(https://flask.palletsprojects.com/en/1.1.x/) ใช้ในการดึงข้อมูลจาก API</li>
   </ul>
 <h2>Install</h2>
   <ul>
